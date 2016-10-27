@@ -1,32 +1,22 @@
-# fcc-image-search-zklinger
+# fcc-file-metadata-zklinger
 
 ![FreeCodeCamp Social Banner](https://s3.amazonaws.com/freecodecamp/wide-social-banner.png)
 
-A full stack JavaScript app that allows you to search for images and see a list of recent queries.
+An API with a POST route for uploading a file and returning a JSON response with the file size.
 
-# API Basejump: Image Search Abstraction Layer
+[https://fcc-file-metadata-zklinger.herokuapp.com/](https://fcc-file-metadata-zklinger.herokuapp.com/)
+
+# API Basejump: File Metadata Microservice
 ### User stories:
-1. I can get the image URLs, alt text and page urls for a set of images relating to a given search string.  
-1. I can paginate through the responses by adding a `?offset=2` parameter to the URL.
-1. I can get a list of the most recently submitted search strings.  
-
-### Example usage:
-`https://fcc-image-search-zklinger.herokuapp.com/api/imagesearch/` **+** `search terms` **+** `?offset=10`  
-Like:  
-`https://fcc-image-search-zklinger.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10`
+1. I can submit a FormData object that includes a file upload.  
+1. When I submit something, I will receive the file size in bytes within the JSON response.
 
 ### Example output:
 ```
 {
-  "url": "http://google.com/dsfa/adsfdfsasd?234/234234/2/ddsfsfd.jpg",
-  "snippet": "Funny lolcats (photo...",
-  "thumbnail": "http://google.com/dsfa/adsfdfsasd?234/234234/2/ddsfsfd.jpg",
-  "context": "https://fcc-image-search-zklinger.herokuapp.com/25",
+  "size": "27089"
 }
 ```
-### Example usage:
-To get a list of recent search terms:  
-`https://fcc-image-search-zklinger.herokuapp.com/api/latest/imagesearch/`
 
 Built as a Node.js app using [Express 4](http://expressjs.com/).
 
@@ -36,9 +26,9 @@ This application came from the [Getting Started with Node on Heroku](https://dev
 
 Make sure you have [Node.js](http://nodejs.org/) installed and `mongod` running.
 
-```sh
-$ git clone https://github.com/zklinger2000/fcc-image-search-zklinger.git
-$ cd fcc-image-search-zklinger
+```
+$ git clone https://github.com/zklinger2000/fcc-file-metadata-zklinger.git
+$ cd fcc-file-metadata-zklinger
 $ npm install
 $ npm start
 ```
