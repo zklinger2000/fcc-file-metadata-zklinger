@@ -24,7 +24,7 @@ This application came from the [Getting Started with Node on Heroku](https://dev
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) installed and `mongod` running.
+Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```
 $ git clone https://github.com/zklinger2000/fcc-file-metadata-zklinger.git
