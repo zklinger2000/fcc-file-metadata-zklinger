@@ -1,13 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const router = require('./router');
 
 const app = express();
 
 app.use(morgan('combined')); // Middleware for logging
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.json({ type: '*/*' })); // Middleware parses incoming requests into JSON
+// app.use(bodyParser.json({ type: '*/*' })); // Middleware parses incoming requests into JSON
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
